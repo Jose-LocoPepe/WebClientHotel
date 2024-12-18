@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option csharp_namespace = "ClienteWebgRPC";
+option csharp_namespace = "WebClientHotel";
 
 package greet;
 

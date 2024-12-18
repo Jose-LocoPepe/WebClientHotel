@@ -20,5 +20,7 @@
     </PackageReference>
     <PackageReference Include="mysql.entityframeworkcore" Version="7.0.0" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
+  </ItemGroup>
 </Project>

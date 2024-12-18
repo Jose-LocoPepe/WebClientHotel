@@ -11,11 +11,12 @@ service Greeter {
 }
 
 message ReservaRequest {
-  int id_cliente = 1;
-  int dias = 2;
+  int32 id_cliente = 1;
+  int32 dias = 2;
 }
 message ReservaReply {
-  string message = 1;
+  int32 id_cliente = 1;
+  int32 dias = 2;
 }
 
 message AgregarRequest {
@@ -24,5 +25,7 @@ message AgregarRequest {
   string apellido = 3;
 }
 message AgregarReply {
-  string message = 1;
+  string rut = 1;
+  string nombre = 2;
+  string apellido = 3;
 }

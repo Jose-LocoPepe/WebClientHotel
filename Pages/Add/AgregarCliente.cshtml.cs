@@ -29,9 +29,9 @@ namespace WebClientHotel.Pages.Add
                 var reply = await client.AgregarClienteAsync(
                                 new AgregarRequest { Rut = rut, Nombre = nombre, Apellido = apellido });
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error al agregar cliente");
+                Console.Error.WriteLine($"An error occurred while adding the client: {ex.Message}");
                 throw;
             }
         }

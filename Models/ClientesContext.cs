@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using DotNetEnv;
+
 namespace WebClientHotel.Models;
 
 public partial class ClientesContext : DbContext
@@ -21,7 +21,6 @@ public partial class ClientesContext : DbContext
     {
         try
         {
-            DotNetEnv.Env.Load();
             var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
 
             if (string.IsNullOrEmpty(connectionString))

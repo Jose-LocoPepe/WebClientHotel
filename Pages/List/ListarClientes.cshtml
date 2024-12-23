@@ -1,0 +1,35 @@
+﻿@page
+@model WebClientHotel.Pages.List.ListarClientesModel
+@{
+    ViewData["Title"] = "Listar Clientes";
+}
+
+<h1>Listar Clientes</h1>
+@if (Model.Clientes.Count == 0)
+{
+    <p style="margin-top: 7%;text-align: center;font-weight: bold;color:red">No hay clientes registrados.</p>
+}
+else
+{
+<table style="width: 100%; border-collapse: collapse; margin-top: 20px;" class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Rut</th>
+            <th>Días reservados</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model.Clientes)
+        {
+            <tr>
+                <td>@cliente.Nombre</td>
+                <td>@cliente.Apellido</td>
+                <td>@cliente.Rut</td>
+                <td>@cliente.Dias</td>
+            </tr>
+        }
+    </tbody>
+</table>
+}

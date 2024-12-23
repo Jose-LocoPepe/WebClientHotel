@@ -30,7 +30,7 @@ namespace WebClientHotel.Pages.Add
                 await context.SaveChangesAsync();
 
                 // Set success message
-                TempData["SuccessMessage"] = "Cliente added successfully!";
+                TempData["SuccessMessage"] = "Cliente agregado exitosamente!";
 
                 // TODO: The port number must match the port of the ServidorgRPC.
                 using var channel = GrpcChannel.ForAddress(grpcServerUrl);
